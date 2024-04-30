@@ -1,5 +1,6 @@
 package org.waterstones;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -7,7 +8,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import pages.SearchPage;
 
-public class StepDefsSearch {
+public class SearchStepdefs {
 
     SearchPage searchPage = new SearchPage();
     @Given("the Waterstones app is open")
@@ -23,5 +24,20 @@ public class StepDefsSearch {
     @Then("the search results are displayed")
     public void theSearchResultsAreDisplayed() {
         Assert.assertTrue(Hooks.androidDriver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.waterstones.app:id/text_title\" and @text=\"Lonely Planet China\"]")).isDisplayed());
+    }
+
+    @When("I select non-fiction books link")
+    public void iSelectNonFictionBooksLink() {
+        searchPage.selectNonFiction();
+    }
+
+    @And("I search for a non-fiction book")
+    public void iSearchForANonFictionBook() {
+        searchPage.searchForNonFictionBook();
+    }
+
+    @And("I select the non-fiction book from the search results")
+    public void iSelectTheNonFictionBookFromTheSearchResults() {
+        searchPage.selectNonFictionBook();
     }
 }

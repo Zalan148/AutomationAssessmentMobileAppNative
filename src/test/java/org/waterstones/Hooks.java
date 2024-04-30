@@ -9,9 +9,9 @@ import io.cucumber.java.Before;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
 public class Hooks {
 
-    //works on my laptop
     public static AndroidDriver androidDriver;
     @Before
     public void setup() throws MalformedURLException {
@@ -21,12 +21,10 @@ public class Hooks {
         options.setDeviceName("AnyDeviceName");
         options.setApp(System.getProperty("user.dir")+"/apps/Waterstones_4.7.0 (#36466)_Apkpure.apk");
         androidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
-        
-
     }
 
     @After
-    public void teardown(){
+    public void teardown() {
         String currentPackage = androidDriver.getCurrentPackage();
         androidDriver.removeApp(currentPackage);
         androidDriver.quit();
