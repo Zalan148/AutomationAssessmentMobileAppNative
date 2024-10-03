@@ -37,7 +37,8 @@ public class SearchStepdefs {
     }
 
     @And("I select the non-fiction book from the search results")
-    public void iSelectTheNonFictionBookFromTheSearchResults() {
+    public void iSelectTheNonFictionBookFromTheSearchResults() throws InterruptedException {
+        Thread.sleep(5000);
         searchPage.selectNonFictionBook();
     }
 }

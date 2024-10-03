@@ -20,7 +20,7 @@ public class Hooks {
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setDeviceName("AnyDeviceName");
         options.setApp(System.getProperty("user.dir")+"/apps/Waterstones_4.7.0 (#36466)_Apkpure.apk");
-        androidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
+        androidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), options);
     }
 
     @After

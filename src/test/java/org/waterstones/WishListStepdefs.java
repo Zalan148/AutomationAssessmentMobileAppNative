@@ -19,7 +19,8 @@ public class WishListStepdefs {
     }
 
     @And("I add the book to a Wish List")
-    public void iAddTheBookToAWishList() {
+    public void iAddTheBookToAWishList() throws InterruptedException {
+        Thread.sleep(5000);
         searchResultsPage.addToWishList();
     }
 
