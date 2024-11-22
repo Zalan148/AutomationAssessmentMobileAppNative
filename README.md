@@ -26,3 +26,14 @@ Android mobile device used and application tested is Waterstones application
 14) Path to android SDK location will need to be added to environment variables
 15) Start session in Appium Inspector
 16) Highlight TestRunner class -> right click 'Run TestRunner'
+
+If only need to run tests do following:
+1) Launch Intellij
+2) cmd prompt -> appium --address 127.0.0.1 --port 4723 --base-path /wd/hub --use-plugins=element-wait
+3) Launch appium inspector but don't start session yet
+4) Launch Android Studio  and start virtual device
+5) In appium inspector make sure 127.0.0.1, 4723 and /wd/hub are included
+6) Start session in appium inspector
+7) Don't need to uninstall the app if already present in device and don't need to close everything down in device
+8) In intellij right click TestRunner class -> Run 'TestRunner'. All scenarios tagged will run.
+9) For reporting of results go to target folder -> HTMLReports -> right click report.html -> open in explorer -> double click file
