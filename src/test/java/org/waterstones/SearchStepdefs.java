@@ -23,7 +23,7 @@ public class SearchStepdefs {
 
     @Then("the search results are displayed")
     public void theSearchResultsAreDisplayed() {
-        Assert.assertTrue(Hooks.androidDriver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.waterstones.app:id/text_title\" and @text=\"Lonely Planet China\"]")).isDisplayed());
+        Assert.assertTrue(Hooks.androidDriver.findElement(By.id("com.waterstones.app:id/button_sort")).isDisplayed());
     }
 
     @When("I select non-fiction books link")

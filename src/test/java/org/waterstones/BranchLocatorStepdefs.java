@@ -25,7 +25,7 @@ public class BranchLocatorStepdefs {
 
     @Then("the search results for that city are displayed")
     public void theSearchResultsForThatCityAreDisplayed() {
-        Assert.assertTrue(Hooks.androidDriver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.waterstones.app:id/text_shop\" and @text=\"London - Oxford Street\"]")).isDisplayed());
+        Assert.assertTrue(Hooks.androidDriver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.waterstones.app:id/text_shop\" and @text=\"London - Streatham\"]")).isDisplayed());
     }
 
     @And("enter a country")

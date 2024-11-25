@@ -8,9 +8,7 @@ import org.waterstones.Hooks;
 
 public class SearchPage {
     public void appOpen() {
-        ElementPresenceWait.waitUntilVisible(Hooks.androidDriver, Hooks.androidDriver.findElement(By.xpath("//android.widget.Button[@resource-id=\"com.waterstones.app:id/button_secondary\"]")));
-        Hooks.androidDriver.findElement(By.xpath("//android.widget.Button[@resource-id=\"com.waterstones.app:id/button_secondary\"]")).click();
-        Hooks.androidDriver.findElement(By.xpath("//android.widget.AutoCompleteTextView[@resource-id=\"com.waterstones.app:id/search_src_text\"]")).isDisplayed();
+        ElementPresenceWait.waitUntilVisible(Hooks.androidDriver, Hooks.androidDriver.findElement(By.id("com.waterstones.app:id/search_toolbar")));
     }
 
     public void searchForBook() {
