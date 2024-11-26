@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.testng.Assert;
 import pages.SearchResultsPage;
+import pages.WishListPage;
 import sections.LowerSection;
 
 public class WishListStepdefs {
@@ -12,6 +13,8 @@ public class WishListStepdefs {
     SearchResultsPage searchResultsPage = new SearchResultsPage();
 
     LowerSection lowerSection = new LowerSection();
+
+    WishListPage wishListPage = new WishListPage();
 
     @And("I select the book from the search results")
     public void iSelectTheBookFromTheSearchResults() {
@@ -26,6 +29,7 @@ public class WishListStepdefs {
 
     @And("I click the Wish Lists button")
     public void iClickTheWishListsButton() {
+        wishListPage.wishListNotification();
         lowerSection.clickWishList();
     }
 
